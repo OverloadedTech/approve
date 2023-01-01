@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Convalidate Button</title>
+    <style>
+      .convalidate-button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      .convalidate-button:hover {
+        background-color: #45a049;
+      }
+      .convalidate-button:active {
+        background-color: #3e8e41;
+      }
+      .result {
+        text-align: center;
+      }
+      .result h2 {
+        font-size: 24px;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="text-align: center;">
+      <button class="convalidate-button" onclick="convalidate()" style="font-size: 20px;">Convalidate</button>
+    </div>
+    <div class="result" id="result"></div>
+  </body>
+  <script>
+    function convalidate() {
+      const results = ['Approved', 'Refused', 'Waiting'];
+      const result = results[Math.floor(Math.random() * results.length)];
+      document.getElementById('result').innerHTML = `<h2>${result}</h2>`;
+      document.querySelector('.convalidate-button').innerHTML = 'Re-Convalidate';
+    }
+  </script>
+</html>
