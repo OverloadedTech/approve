@@ -1,8 +1,9 @@
 <html>
   <head>
     <title>Convalidate Button</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-       .convalidate-button {
+      .convalidate-button {
         background-color: #4CAF50; /* Green */
         border: none;
         color: white;
@@ -14,7 +15,6 @@
         margin: 4px 2px;
         cursor: pointer;
         border-radius: 4px;
-        width: 100%;
       }
       .convalidate-button:hover {
         background-color: #45a049;
@@ -35,12 +35,14 @@
         justify-content: center;
         height: 100vh;
       }
+      /* Regole di stile per la visualizzazione su dispositivi mobili */
       @media (max-width: 600px) {
         .convalidate-button {
-          font-size: 20px;
+          font-size: 14px;
+          padding: 10px 20px;
         }
         .result h2 {
-          font-size: 20px;
+          font-size: 18px;
         }
       }
     </style>
